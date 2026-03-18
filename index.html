@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+    <div class="container">
+        <div id="partiesPage" class="page active">
+            <div class="stats-banner" id="totalVotesStats">
+                <button id="undoButton" class="undo-button" title="Отмени последна бюлетина" aria-label="Отмени последна бюлетина">↺ <span class="hide">Отмени последна бюлетина</span></button>
+                <div class="stats-text">Общо<span class="hide"> бюлетини</span>: <span id="totalVotesCount">0</span> <span id="checkSumValue">-</span></div>
+            </div>
+            <h1>Избор на партия/коалиция</h1>
+
+            <div id="partiesGridOther" class="parties-grid separate-grid"></div>
+            <div id="partiesGrid" class="parties-grid">
+            </div>
+        </div>
+        <div id="prefsPage" class="page">
+            <div class="stats-banner" id="partyVotesStats">
+                Гласове: <span id="partyVotesCount">0</span>
+            </div>
+            <h1>Избор на преференция</h1>
+            <div class="button-container">
+                <button id="backButton" class="undo-button" aria-label="Назад" title="Назад">← назад</button>
+            </div>
+            <div id="prefsGrid" class="parties-grid"></div>
+        </div>
+            
+    </div>
+    <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
+            <button id="customizeButton" class="customize-button" aria-label="Настройки" title="Настройки"></button>
+            </div>
+    <script src="app.js"></script>
+</body>
+</html>

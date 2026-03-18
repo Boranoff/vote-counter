@@ -1,0 +1,22 @@
+{
+  "short_name": "Гласопреброител",
+  "name": "Гласопреброител",
+  "description": "Инструмент за преброяване на бюлетини.",
+  "icons": [
+    {
+      "src": "./favicon_512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./favicon_192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#f4f4f4",
+  "background_color": "#f0f0f0"
+}
