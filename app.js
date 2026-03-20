@@ -312,7 +312,13 @@ function createPartyButtons() {
     }
 
     // Create buttons for each party
-    Object.entries({'-1':'Невалидна бюлетина','0':'Независим'}).forEach(([number,name]) => {console.log(number);createOtherPartyButtons(number,name);})
+    let p = JSON.parse(localStorage.getItem('prefs') || '{}');
+    let prefs = {'-1':'Невалидна бюлетина'};
+    if (p['0'] !== undefined && p['0'].length > 0) {
+        let obj = {'0':'Независим'};
+        prefs = {...obj, ...prefs};
+    }
+    Object.entries(prefs).forEach(([number,name]) => {console.log(number);createOtherPartyButtons(number,name);})
     Object.entries(parties).forEach(([number, name]) => {
         if(parseInt(number)<=0) return; // Skip invalid and independent for main grid
         const button = document.createElement('button');
